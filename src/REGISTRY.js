@@ -16,7 +16,7 @@ const { refObject, refPackageId, world } = require("@tabletop-playground/api");
 const ENTRIES = [];
 
 /** setup instructions:
- 
+
 Every player should subscribe to both the TI4-TTPG and TI4-Homebrew mods.  If a player has not, they will be prompted to subscribe/download (which may take a while).
 
 - Load the TI4-TTPG mod
@@ -226,6 +226,27 @@ ENTRIES.push({
       id: "garbz",
       name: "Add system",
       inject: "garbozia/garbozia-inject.js",
+    },
+  ],
+});
+
+// --------------------------------------------------------
+
+ENTRIES.push({
+  name: "Hive Wars",
+  authors: "Mario Martinez",
+  description: [
+    "Hive Wars V3.44 - a two player co-op variant of Twilight Imperium 4",
+    "",
+    "Two players must forge an alliance to halt a ravenous galactic infestation of the Hive",
+    "The Hive is an A.I 'player' represented by the Sardakk N'orr faction",
+  ].join("\n"),
+  packageId: refPackageId,
+  options: [
+    {
+      id: "hivew",
+      name: "Hive Wars",
+      inject: "hive-wars/hive-wars-inject.js",
     },
   ],
 });
